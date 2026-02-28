@@ -15,10 +15,10 @@ for (let i = 0; i < botoes.length; i++) {
 
 // Configuração dos Cronômetros
 const contadores = document.querySelectorAll(".contador");
-const tempoObjetivo1 = new Date("2027-12-05T00:00:00");
-const tempoObjetivo2 = new Date("2026-12-05T00:00:00");
-const tempoObjetivo3 = new Date("2028-01-30T00:00:00");
-const tempoObjetivo4 = new Date("2030-01-01T00:00:00");
+const tempoObjetivo1 = new Date("2030-01-04T00:00:00");
+const tempoObjetivo2 = new Date("2028-01-03T00:00:00");
+const tempoObjetivo3 = new Date("2026-12-02T00:00:00");
+const tempoObjetivo4 = new Date("2027-12-01T00:00:00");
 
 const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
 

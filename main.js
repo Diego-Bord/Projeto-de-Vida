@@ -1,3 +1,4 @@
+// Lógica de troca de abas
 const botoes = document.querySelectorAll(".botao");
 const textos = document.querySelectorAll(".aba-conteudo");
 
@@ -12,6 +13,7 @@ for (let i = 0; i < botoes.length; i++) {
     }
 }
 
+// Configuração dos Cronômetros
 const contadores = document.querySelectorAll(".contador");
 const tempoObjetivo1 = new Date("2027-12-05T00:00:00");
 const tempoObjetivo2 = new Date("2026-12-05T00:00:00");
@@ -44,17 +46,17 @@ function atualizaCronometro() {
     for (let i = 0; i < contadores.length; i++) {
         const valores = calculaTempo(tempos[i]);
         
-        // Atualiza os elementos no HTML usando o índice i
+        // Atualiza o HTML e garante que sempre tenha 2 dígitos (ex: 05 em vez de 5)
         document.getElementById("dias" + i).textContent = valores[0];
-        document.getElementById("horas" + i).textContent = valores[1];
-        document.getElementById("min" + i).textContent = valores[2];
-        document.getElementById("seg" + i).textContent = valores[3];
+        document.getElementById("horas" + i).textContent = valores[1].toString().padStart(2, '0');
+        document.getElementById("min" + i).textContent = valores[2].toString().padStart(2, '0');
+        document.getElementById("seg" + i).textContent = valores[3].toString().padStart(2, '0');
     }
 }
 
 function comecaCronometro() {
-    atualizaCronometro(); // Chama uma vez logo de cara
-    setInterval(atualizaCronometro, 1000); // Depois atualiza a cada 1 segundo
+    atualizaCronometro();
+    setInterval(atualizaCronometro, 1000);
 }
 
 comecaCronometro();
